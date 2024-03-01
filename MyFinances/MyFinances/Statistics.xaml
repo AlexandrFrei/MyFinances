@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFinances.Statistics"
+             Title="Отчёт">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="label1" Text="От" FontSize="Medium" />
+                <DatePicker x:Name="fromDatePicker" Format="D" DateSelected="DatePicker_DateSelected" ></DatePicker>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="label2" Text="До" FontSize="Medium" />
+                <DatePicker x:Name="toDatePicker" Format="D" DateSelected="DatePicker_DateSelected"></DatePicker>
+            </StackLayout>
+
+            <Label x:Name="revenueLabel" Text="" FontSize="Medium" />
+            <Label x:Name="expensesLabel" Text="" FontSize="Medium" />
+            <Label x:Name="resultLabel" Text="" FontSize="Medium" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

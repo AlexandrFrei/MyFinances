@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFinances.MainPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Меню" BackgroundColor="#b9f6ca">
+            <ContentPage.Content>
+                <StackLayout Padding="5, 30, 5, 5">
+                    <Button Text="Доходы" Clicked="Button1_Click"></Button>
+                    <Button Text="Расходы" Clicked="Button2_Click"></Button>
+                    <Button Text="Отчёт" Clicked="Button3_Click"></Button>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Content>
+                <Label Text="Добро пожаловать в приложение!" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFinances.Expenses"
+             Title="Расходы">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="label1" Text="От" FontSize="Medium" />
+            <DatePicker x:Name="fromDatePicker" Format="D" DateSelected="DatePicker_DateSelected"></DatePicker>
+
+            <Label x:Name="label2" Text="До" FontSize="Medium" />
+            <DatePicker x:Name="toDatePicker" Format="D" DateSelected="DatePicker_DateSelected"></DatePicker>
+
+            <ListView x:Name="ListView" ItemsSource="{Binding Models}" ItemTapped="ListView_ItemTapped" SeparatorColor="Red" RowHeight="85">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout>
+                                    <Label Text="{Binding Name}" FontSize="Large" />
+                                    <Label Text="{Binding Date}" />
+                                    <Label Text="{Binding Count}" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="AddButton" Text="Добавить" Clicked="AddButton_Clicked" VerticalOptions="End"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
